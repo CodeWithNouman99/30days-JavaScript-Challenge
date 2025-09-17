@@ -157,3 +157,27 @@ document.querySelectorAll(".filters button").forEach(btn=>
   })
 }
 )
+
+
+                          // Problem Statements:
+//Q 5: Find maximum number in an array
+let arr = [1, 2, 3, 99, 45, 67];
+let maxNum = arr[0];
+for (let num of arr) {
+  if (num > maxNum) {
+    maxNum = num;
+  }
+}
+console.log(maxNum); // 99
+
+
+ //Q 6:Find factorial of a number
+ function factorial(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;   // result = result * i
+  }
+  return result;
+}
+
+console.log(factorial(5)); // 120
