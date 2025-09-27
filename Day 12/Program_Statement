@@ -1,0 +1,15 @@
+1)     Check if object is empty?
+const isEmpty = (obj) => Object.keys(obj).length === 0;
+
+console.log(isEmpty({})); // true
+console.log(isEmpty({ name: "Nouman" })); // false
+
+
+ 2) Clone an object without reference
+
+// Option 1: Using spread
+const original = { name: "Nouman", age: 22 };
+const clone = { ...original };
+
+// Option 2: Using JSON
+const deepClone = JSON.parse(JSON.stringify(original));
