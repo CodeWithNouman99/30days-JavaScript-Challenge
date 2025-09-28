@@ -1,0 +1,216 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Background */
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* App Heading */
+body > h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: fadeInDown 0.8s ease;
+}
+
+/* Stylish underline */
+body > h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: width 0.4s ease;
+}
+
+body > h1:hover::after {
+  width: 140px;
+}
+
+/* Container (card) */
+.container {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-6px);
+}
+
+/* Balance section */
+#balance {
+  font-size: 2rem;
+  color: #2575fc;
+  margin: 10px 0 25px;
+}
+
+/* Income & Expense box */
+.inc-exp-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 12px;
+  gap: 15px;
+}
+
+.inc-exp-container div {
+  flex: 1;
+  text-align: center;
+}
+
+.money-plus {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.money-minus {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* History list */
+ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+ul li {
+  background: #fdfdfd;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+ul li.minus {
+  border-left: 6px solid #e74c3c;
+}
+
+ul li.plus {
+  border-left: 6px solid #2ecc71;
+}
+
+ul li:hover {
+  background: #f1f1f1;
+  transform: translateX(6px);
+}
+
+/* Delete button */
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Form */
+.form-control {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border 0.3s ease, transform 0.2s;
+}
+
+input:focus {
+  border-color: #2575fc;
+  transform: scale(1.02);
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #1d63d2, #580ea6);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body > h1 {
+    font-size: 2.2rem;
+  }
+  .container {
+    padding: 20px;
+  }
+  #balance {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation for heading */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
