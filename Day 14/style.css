@@ -1,0 +1,94 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f2027;  /* fallback */
+  background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+}
+
+/* Heading styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #00e0ff;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.6);
+  letter-spacing: 1px;
+}
+
+/* Main container */
+#container {
+  background: #1c1c1c;
+  padding: 35px 40px;
+  border-radius: 14px;
+  width: 360px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 224, 255, 0.4);
+}
+
+/* Labels */
+#container label {
+  display: block;
+  font-weight: 500;
+  margin: 15px 0 8px;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+/* Inputs */
+#container input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: #111;
+  color: #eee;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#container input:focus {
+  border-color: #00e0ff;
+  box-shadow: 0 0 8px rgba(0, 224, 255, 0.6);
+}
+
+/* Button */
+#calculate-btn {
+  margin-top: 22px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00e0ff, #0078ff);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#calculate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 224, 255, 0.6);
+}
+
+#calculate-btn:active {
+  transform: scale(0.97);
+}
